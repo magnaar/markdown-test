@@ -9,9 +9,15 @@
 
 ---
 
+## Usage
+- [Import](#import)
 - [Basic instanciation](#basic-instanciation)
 
-## Basic instanciation
+## Methods listing
+- [Methods Enum](doc/enum.md)
+- [Methods EnumValue](doc/enum-value.md)
+
+### Import
 ```
 import { Enum } from 'another-enum'
 const Enum = require('another-enum').Enum
@@ -19,6 +25,7 @@ const Enum = require('another-enum').Enum
 const Colors = Enum.Colors('RED', 'GREEN', 'BLUE')
 ```
 
+### Basic instanciation
 ```
 Enum.EnumName([base|class], NAME1, NAME2, ...)
 Enum.EnumName({base:..., class:...}, NAME1, NAME2, ...)
