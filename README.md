@@ -1,6 +1,6 @@
 **another-enum** 1.0.0
 =================
-###_Another enum module, nothing more_
+### _Another enum module, nothing more_
 
 ---
 [![NPM](https://nodei.co/npm/another-enum.png)](https://nodei.co/npm/another-enum/)
@@ -11,7 +11,7 @@
 
 - [Basic instanciation](#basic-instanciation)
 
-#Basic instanciation
+## Basic instanciation
 ```
 import { Enum } from 'another-enum'
 const Enum = require('another-enum').Enum
