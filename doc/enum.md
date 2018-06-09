@@ -1,10 +1,10 @@
-<h2><strong>Enum</strong> <i>(returned by Enum.YourName(...))</i></h2>
-<h3><strong>get</strong>(<i>value</i>)</h3>
-<pre><code>
+###**Enum** _(returned by Enum.YourName(...))_
+####**get**(_value_)
+```
 Colors.get(1) // EnumValue GREEN
 HexaColors.get(0x00FF00) // EnumValue GREEN
 CssColors.get("#00FF00") // EnumValue GREEN
-</code></pre>
+```
 
 ####**getAt**(_index_)
 ```
