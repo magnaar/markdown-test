@@ -1,3 +1,4 @@
+[![NPM](https://nodei.co/npm/another-enum.png?mini=true)](https://www.npmjs.com/package/another-enum)
 ### **EnumValue**
 #### **index**
 ```

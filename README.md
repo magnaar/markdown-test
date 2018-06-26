@@ -3,21 +3,23 @@
 ### _Another enum module, nothing more_
 
 ---
-[![NPM](https://nodei.co/npm/another-enum.png)](https://nodei.co/npm/another-enum/)
+[![NPM](https://nodei.co/npm/another-enum.png)](https://www.npmjs.com/package/another-enum)
 
-[![](https://img.shields.io/badge/version-1.0.0-blue.svg)]() [![](https://img.shields.io/badge/build-passing-brightgreen.svg)]() [![](https://img.shields.io/badge/tests-76%2F76-brightgreen.svg)]() [![](https://img.shields.io/badge/dependencies-none-brightgreen.svg)]()
+[![](https://img.shields.io/badge/version-1.0.0-blue.svg)]() [![](https://img.shields.io/badge/build-passing-brightgreen.svg)]() [![](https://img.shields.io/badge/tests-91%2F91-brightgreen.svg)]() [![](https://img.shields.io/badge/dependencies-none-brightgreen.svg)]()
 
 ---
 
 ## Usage
 - [Import](#import)
 - [Basic instanciation](#basic-instanciation)
+- [Serializing](#serializing)
 
 ## Methods listing
-- [Methods Enum](doc/enum.md)
-- [Methods EnumValue](doc/enum-value.md)
+- [Enum Constructors](doc/enum-constructors.md)
+- [Enum Methods](doc/enum.md)
+- [EnumValue Methods](doc/enum-value.md)
 
-### Import
+### **Import**
 ```
 import { Enum } from 'another-enum'
 const Enum = require('another-enum').Enum
@@ -25,26 +27,35 @@ const Enum = require('another-enum').Enum
 const Colors = Enum.Colors('RED', 'GREEN', 'BLUE')
 ```
 
-### Basic instanciation
+### **Basic instanciation**
 ```
-Enum.EnumName([base|class], NAME1, NAME2, ...)
-Enum.EnumName({base:..., class:...}, NAME1, NAME2, ...)
+Enum.EnumName(NAME1, NAME2, ...)
 
-Enum.EnumName([base|class], {
+Enum.EnumName({
    NAME1: value1,
    NAME2: value2,
    ...
 })
+```
+See also: [Enum Constructors](doc/enum-constructors.md)
 
-Enum.EnumName([base|class], {
-   NAME1: {
-       [value: value1],
-       class: Name1Class
-   },
-   NAME2: {
-       [value: value2],
-       class: Name2Class
-   },
-   ...
+See also: [Instanciation with base](doc/base-instanciation.md)
+
+#### _Examples_
+```
+const Colors = Enum.Colors('RED', 'GREEN', 'BLUE')
+
+const SimpleHexaColors = Enum.SimpleHexaColors({
+    RED: 0xFF0000,
+    GREEN: 0x00FF00,
+    BLUE: 0x0000FF
+})
+
+// Should be avoided
+// Because it will fail when trying to convert it in a number value
+const CssColors = Enum.CssColors({
+    RED: '#FF0000',
+    GREEN: '#00FF00',
+    BLUE: '#0000FF'
 })
 ```
